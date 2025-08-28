@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Deneme Sınavı - Cevap Girişi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="wrap">
+    <div class="card">
+        <h1>Deneme Sınavı - Cevap Girişi</h1>
+
+        {% if hata %}
+            <div class="alert">{{ hata }}</div>
+        {% endif %}
+
+        <form method="post" action="/">
+            <label>Öğrenci Kodu</label>
+            <input type="text" name="ogrenci_kodu" placeholder="Öğrenci kodunu girin" required>
+
+            <label>Deneme Seçin</label>
+            <select name="deneme_kodu" id="deneme_kodu" onchange="loadDersler()">
+                <option value="">-- Deneme Seçin --</option>
+                {% for d in deneme_listesi %}
+                    <option value="{{ d }}">{{ d }}</option>
+                {% endfor %}
+            </select>
+
+            <div id="dinamik-form"></div>
+
+            <div style="text-align:center;">
+                <button class="btn" type="submit">Sonuçları Göster</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // cevap anahtarları serverdan gelmeli
+    const cevapAnahtarlari = {{ cevap_anahtarlari | tojson }};
+    const dersSirasi = {{ ("[\""+ ("\",\"".join(ders_sirasi if ders_sirasi is defined else ['Türkçe','inkılap Tarihi','Sosyal Bilgiler','Din Kültürü ve Ahlak Bilgisi','Yabancı Dil','Matematik','Fen Bilimleri'])) + "\"]") | safe if false else "null" }};
+    // above line is fallback; actual ders sirasi is handled server-side in rendering route
+
+    // sanitize function for css class (keeps consistent look)
+    function sanitizeClassName(d) {
+        return d.toLowerCase()
+                .replace(/ç/g,'c').replace(/ş/g,'s').replace(/ğ/g,'g')
+                .replace(/ü/g,'u').replace(/ö/g,'o').replace(/ı/g,'i')
+                .replace(/[^\w]+/g, '-').replace(/^-+|-+$/g,'');
+    }
+
+    function loadDersler(){
+        const sel = document.getElementById("deneme_kodu").value;
+        const area = document.getElementById("dinamik-form");
+        area.innerHTML = "";
+        if(!sel || !cevapAnahtarlari[sel]) return;
+        // desired order (server uses DERS_SIRASI), we reconstruct order from keys in answer_keys but prefer fixed order
+        const fixedOrder = ["Türkçe","inkılap Tarihi","Sosyal Bilgiler","Din Kültürü ve Ahlak Bilgisi","Yabancı Dil","Matematik","Fen Bilimleri"];
+        const dersler = cevapAnahtarlari[sel];
+
+        fixedOrder.forEach(ders => {
+            if(!(ders in dersler)) return;
+            const div = document.createElement("div");
+            div.className = "subject " + "s-" + sanitizeClassName(ders);
+            div.innerHTML = `<h3>${ders}</h3>`;
+            const g = document.createElement("div");
+            g.className = "grid";
+            dersler[ders].forEach((_, idx) => {
+                const inp = document.createElement("input");
+                inp.type = "text";
+                inp.name = `${ders}_${idx+1}`;
+                inp.maxLength = 1;
+                inp.placeholder = (idx+1);
+                g.appendChild(inp);
+            });
+            div.appendChild(g);
+            area.appendChild(div);
+        });
+    }
+</script>
+</body>
+</html>

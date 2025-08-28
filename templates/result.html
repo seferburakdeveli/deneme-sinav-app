@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Sonuçlar - {{ ogrenci_kodu }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>Sonuçlar</h1>
+    <p><strong>Öğrenci:</strong> {{ ogrenci_adi or ogrenci_kodu }} &nbsp; | &nbsp; <strong>Öğrenci Kodu:</strong> {{ ogrenci_kodu }} &nbsp; | &nbsp; <strong>Deneme:</strong> {{ deneme_kodu }}</p>
+
+    <h2>Genel Puan: <span class="big">{{ toplam_puan }}</span></h2>
+
+    <!-- Ders bazlı sonuç özetleri -->
+    {% for ders in ders_sirasi %}
+      {% if per_ders.get(ders) %}
+        {% set info = per_ders[ders] %}
+        <div class="subject s-{{ ders|lower
+            |replace('ç','c')|replace('ş','s')|replace('ğ','g')|replace('ü','u')|replace('ö','o')|replace('ı','i')
+            |replace(' ','-')|replace('/','-') }}">
+          <h3>{{ ders }}</h3>
+
+          <div class="summary">
+            <div><strong>Doğru:</strong> {{ info.dogru }}</div>
+            <div><strong>Yanlış:</strong> {{ info.yanlis }}</div>
+            <div><strong>Boş:</strong> {{ info.bos }}</div>
+            <div><strong>Net:</strong> {{ info.net }}</div>
+            <div><strong>Katsayı:</strong> {{ katsayilar.get(ders, 0) }}</div>
+            <div><strong>Ders Puanı:</strong> {{ (info.net * katsayilar.get(ders,0))|round(2) }}</div>
+          </div>
+
+          <table class="qtable">
+            <thead>
+              <tr><th>#</th><th>Senin</th><th>Doğru</th><th>Durum</th></tr>
+            </thead>
+            <tbody>
+              {% for q in info.qstatus %}
+                <tr class="{{ 'ok' if q.durum=='dogru' else ('empty' if q.durum=='bos' else 'bad') }}">
+                  <td>{{ q.no }}</td>
+                  <td>{{ q.given }}</td>
+                  <td>{{ q.correct }}</td>
+                  <td>
+                    {% if q.durum == 'dogru' %}Doğru
+                    {% elif q.durum == 'yanlis' %}Yanlış
+                    {% elif q.durum == 'bos' %}Boş
+                    {% else %}{{ q.durum }}
+                    {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <h2>Puan Sıralaması ({{ deneme_kodu }})</h2>
+    <table class="ranking">
+      <thead><tr><th>Sıra</th><th>Öğrenci</th><th>Kod</th><th>Puan</th></tr></thead>
+      <tbody>
+        {% for r in ranking %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ r.ogrenci_adi }}</td>
+            <td>{{ r.ogrenci_kodu }}</td>
+            <td>{{ r.puan }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div style="text-align:center;margin-top:18px;">
+      <a class="btn" href="{{ url_for('index') }}">Yeni Giriş</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
