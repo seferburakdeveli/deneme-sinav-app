@@ -1,0 +1,46 @@
+:root{
+  --bg:#f2f7fb; --card:#fff; --accent:#3b82f6; --muted:#7b8794;
+}
+body{font-family:Inter,Segoe UI,Roboto,Arial; background:var(--bg); margin:0; padding:30px 12px;}
+.wrap{max-width:1100px;margin:0 auto;}
+.card{background:var(--card); padding:24px; border-radius:12px; box-shadow:0 8px 30px rgba(20,30,50,0.06);}
+h1{margin:0 0 16px;font-size:24px;color:#16324f;}
+h2{margin:18px 0;color:#16324f;}
+.big{color:#0b74e0;font-size:22px;font-weight:700;}
+.alert{background:#fff2f0;border-left:4px solid #f59e0b;padding:10px;border-radius:6px;margin-bottom:12px;color:#8a3b00;}
+
+label{display:block;margin-top:8px;font-weight:600;color:#334155;}
+input[type=text], select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6;margin-top:6px;box-sizing:border-box;}
+
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;}
+.btn:hover{opacity:.95; transform:translateY(-1px);}
+
+/* subject card */
+.subject{padding:14px;border-radius:10px;color:#fff;margin-top:14px;}
+.subject h3{margin:0 0 10px;font-size:18px;}
+.subject .grid{display:flex;flex-wrap:wrap;gap:8px;}
+.subject input{width:44px;padding:8px;border-radius:8px;background:rgba(255,255,255,0.95);border:0;font-weight:700;text-align:center;color:#0b2a3b;}
+
+/* summary */
+.summary{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;color:#07122b;font-weight:600;}
+.summary div{background:rgba(255,255,255,0.12);padding:8px 10px;border-radius:8px;color:#fff;}
+
+/* subject colors (use same classes as in templates) */
+.s-turkce{background:#2196F3;}
+.s-inkilap-tarihi{background:#9C27B0;}
+.s-sosyal-bilgiler{background:#27F5D3;color:#033;}
+.s-din-kulturu-ve-ahlak-bilgisi{background:#4CAF50;}
+.s-yabanci-dil{background:#FF9800;color:#033;}
+.s-matematik{background:#f44336;}
+.s-fen-bilimleri{background:#3F51B5;}
+
+/* question table */
+.qtable{width:100%;border-collapse:collapse;margin-top:8px;background:#fff;color:#0b2a3b;border-radius:8px;overflow:hidden;}
+.qtable th, .qtable td{padding:8px;border-bottom:1px solid #eef2f7;text-align:center;}
+.qtable tr.ok{background:#a0f9b9;}
+.qtable tr.bad{background:#faa6a6;}
+.qtable tr.empty{background:#f7e492;}
+
+/* ranking */
+.ranking{width:100%;border-collapse:collapse;margin-top:8px;}
+.ranking th, .ranking td{padding:8px;border:1px solid #eef2f7;text-align:center;}
