@@ -1,0 +1,72 @@
+{
+  "2. Sınıf Deneme-1": {
+    "Türkçe":                        ["A", "B", "C", "D", "A", "C", "B", "D", "C", "A", "B", "C", "D", "A", "B", "D", "C", "B", "A", "D"],
+    "Matematik":                     ["B", "A", "D", "C", "B", "A", "C", "D", "A", "B", "D", "C", "B", "A", "C", "D", "B", "A", "C", "D"],
+    "Fen Bilimleri":                 ["C", "D", "A", "B", "D", "C", "A", "B", "D", "A", "B", "C", "A", "D", "C", "B", "A", "B", "C", "D"],
+    "inkılap Tarihi":                ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"],
+    "Din Kültürü ve Ahlak Bilgisi":  ["C", "D", "A", "B", "C", "D", "A", "B", "C", "D"],
+    "Yabancı Dil":                   ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"]
+  },
+
+  "3. Sınıf Deneme-1": {
+    "Türkçe":                         ["A", "B", "C", "D", "A", "C", "B", "D", "C", "A", "B", "C", "D", "A", "B", "D", "C", "B", "A", "D"],
+    "Matematik":                      ["B", "A", "D", "C", "B", "A", "C", "D", "A", "B", "D", "C", "B", "A", "C", "D", "B", "A", "C", "D"],
+    "Fen Bilimleri":                  ["C", "D", "A", "B", "D", "C", "A", "B", "D", "A", "B", "C", "A", "D", "C", "B", "A", "B", "C", "D"],
+    "Sosyal Bilgiler":                ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"],
+    "Din Kültürü ve Ahlak Bilgisi":   ["C", "D", "A", "B", "C", "D", "A", "B", "C", "D"],
+    "Yabancı Dil":                    ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"]
+  },
+  
+  "4. Sınıf Deneme-1": {
+    "Türkçe":                          ["A", "B", "C", "D", "A", "C", "B", "D", "C", "A", "B", "C", "D", "A", "B", "D", "C", "B", "A", "D"],
+    "Matematik":                       ["B", "A", "D", "C", "B", "A", "C", "D", "A", "B", "D", "C", "B", "A", "C", "D", "B", "A", "C", "D"],
+    "Fen Bilimleri":                   ["C", "D", "A", "B", "D", "C", "A", "B", "D", "A", "B", "C", "A", "D", "C", "B", "A", "B", "C", "D"],
+    "inkılap Tarihi":                  ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"],
+    "Din Kültürü ve Ahlak Bilgisi":    ["C", "D", "A", "B", "C", "D", "A", "B", "C", "D"],
+    "Yabancı Dil":                     ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"]
+  },
+  
+   "5. Sınıf Deneme-1": {
+    "Türkçe":                          ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+    "Matematik":                       ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+    "Fen Bilimleri":                   ["C", "D", "A", "B", "D", "C", "A", "B", "D", "A", "B", "C", "A", "D", "C", "B", "A", "B", "C", "D"],
+    "Sosyal Bilgiler":                 ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"],
+    "Din Kültürü ve Ahlak Bilgisi":    ["C", "D", "A", "B", "C", "D", "A", "B", "C", "D"],
+    "Yabancı Dil":                     ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"]
+  },
+  
+  "6. Sınıf Deneme-1": {
+    "Türkçe":                          ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+    "Matematik":                       ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+    "Fen Bilimleri":                   ["C", "D", "A", "B", "D", "C", "A", "B", "D", "A", "B", "C", "A", "D", "C", "B", "A", "B", "C", "D"],
+    "Sosyal Bilgiler":                 ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"],
+    "Din Kültürü ve Ahlak Bilgisi":    ["C", "D", "A", "B", "C", "D", "A", "B", "C", "D"],
+    "Yabancı Dil":                     ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"]
+  },
+  
+  "7. Sınıf Deneme-1": {
+    "Türkçe":                          ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+    "Matematik":                       ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+    "Fen Bilimleri":                   ["C", "D", "A", "B", "D", "C", "A", "B", "D", "A", "B", "C", "A", "D", "C", "B", "A", "B", "C", "D"],
+    "Sosyal Bilgiler":                 ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"],
+    "Din Kültürü ve Ahlak Bilgisi":    ["C", "D", "A", "B", "C", "D", "A", "B", "C", "D"],
+    "Yabancı Dil":                     ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"]
+  },
+  
+  "8. Sınıf LGS Deneme-1": {
+    "Türkçe":                          ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+    "Matematik":                       ["B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"],
+    "Fen Bilimleri":                   ["C", "D", "A", "B", "D", "C", "A", "B", "D", "A", "B", "C", "A", "D", "C", "B", "A", "B", "C", "D"],
+    "Sosyal Bilgiler":                 ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"],
+    "Din Kültürü ve Ahlak Bilgisi":    ["C", "D", "A", "B", "C", "D", "A", "B", "C", "D"],
+    "Yabancı Dil":                     ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B"]
+  },
+  
+   "Bilgidem Akademi": {
+    "Yabancı Dil": ["B", "C", "D", "A", "B", "C", "D", "A", "B", "C", "D", "A", "B", "C", "D", "A", "B", "C", "D", "A", "B", "C", "D", "A", "B"]
+  },
+  
+  "English Test - Grade 3.1": {
+    "Yabancı Dil": ["D", "A", "B", "C", "A", "C", "A", "D", "C", "B", "A", "B", "D", "A", "A", "D", "C", "D", "C", "B"]
+  }
+}
